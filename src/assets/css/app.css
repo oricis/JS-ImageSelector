@@ -1,1 +1,72 @@
-/* TODO: */
+.border-box
+{
+    border: 1px solid grey;
+}
+.border-top {
+    border-top: 1px solid grey;
+}
+.cblue {
+    color: rgb(91, 133, 211);
+}
+.cgrey {
+    color:grey;
+}
+.flex {
+    display: flex;
+}
+.flex-center {
+    align-items     : center;
+    justify-content : center;
+}
+.flex-both { /* preserve order: flex-center first */
+    justify-content: space-between;
+}
+.flex-column {
+    flex-direction: column;
+}
+.no-bg {
+    background: transparent;
+}
+.pad-2 {
+    padding: 2%;
+}
+.pad-10 {
+    padding: 10%;
+}
+.center-content {
+    text-align: center;
+}
+.right-content {
+    text-align: right;
+}
+.top-2 {
+    margin-top: 2%;
+}
+.top-5 {
+    margin-top: 5%;
+}
+.left-5 {
+    margin-left: 5%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-80 {
+    width: 80%;
+}
+
+/* custom styles */
+.content {
+    margin    : 2rem auto;
+    max-width : 920px;
+    width     : 90%;
+}
+header {
+    height: 20vh;
+}
+main {
+    min-height: 60vh;
+}
+footer {
+    height: 20vh;
+}
