@@ -88,11 +88,16 @@ window.onload = () => {
             // select the variation on init
             selectVariationImageOnInit(selectorButton, productImageSrc);
 
-            selectorButton.addEventListener('click', function (event) {
+            selectorButton.addEventListener('click', (event) => {
                 updateImages(selectorButton);
                 updateItemDetails(selectorButton.id, selectVariations);
             });
         })
+
+
+        selectVariations.addEventListener("change", (event) => {
+            console.log('select option value: ' + event.target.value);
+        });
     }
 
 }; // window.onload
