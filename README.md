@@ -1,4 +1,4 @@
-# JS ProductImageSelector
+# JS ProductImageSelector - v.1.0.0
 
 This project is an HTML + CSS + JS part of one "e-shop product page" used
 to select a product variation based on one image collection.
@@ -13,9 +13,10 @@ Its possible use this "image selector" easily implementing your JS on the
 function "updateItemDetails()" used in the demo to update the product details.
 
 ***
-## Available project page
+## Demo page
 
 This project has a demo page running on:
+### https://oricis.github.io/JS-ImageSelector/
 
 ***
 ## About
