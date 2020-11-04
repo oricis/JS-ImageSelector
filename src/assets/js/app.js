@@ -24,6 +24,11 @@ window.onload = () => {
             productImage.src = selected.src;
         }
 
+        function updateItemDetails(selectedId)
+        {
+            console.log('selectedId: ' + selectedId); // HACK:
+        }
+
         // Put a selected frame around the current variation image
         const productImage = $('#main-image');
         const productImageSrc = productImage.src;
@@ -39,6 +44,7 @@ window.onload = () => {
 
             selectorButton.addEventListener('click', function (event) {
                 updateImages(selectorButton);
+                updateItemDetails(selectorButton.id);
             });
         })
     }
