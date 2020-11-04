@@ -1,0 +1,30 @@
+{
+  "name": "JS-ImageSelector",
+  "version": "1.0.0",
+  "description": "HTML + CSS + JS image selector for product pages / catalogs.",
+  "main": "./index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "library": {
+      "name": "JS-UI",
+      "version": "1.3.0",
+      "repository": "https://github.com/oricis/JS-UI",
+      "file": "https://raw.githubusercontent.com/oricis/JS-UI/master/dist/src/index.min.js"
+    }
+  },
+  "devDependencies": {},
+  "extra": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oricis/JS-ImageSelector.git"
+  },
+  "keywords": [],
+  "author": "Moisés Alcocer",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/oricis/JS-ImageSelector/issues"
+  },
+  "homepage": "https://github.com/oricis/JS-ImageSelector#readme"
+}
