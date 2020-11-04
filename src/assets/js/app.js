@@ -88,7 +88,7 @@ window.onload = () => {
             // select the variation on init
             selectVariationImageOnInit(selectorButton, productImageSrc);
 
-            selectorButton.addEventListener('click', (event) => {
+            selectorButton.addEventListener('click', () => {
                 updateImages(selectorButton);
                 updateItemDetails(selectorButton.id, selectVariations);
             });
@@ -96,7 +96,18 @@ window.onload = () => {
 
 
         selectVariations.addEventListener("change", (event) => {
-            console.log('select option value: ' + event.target.value);
+            const optionId = event.target.value;
+            const variationData = data.variations[optionId];
+
+            // Updated text details
+            const stock = variationData.stock;
+            setText($('#price'), variationData.price);
+            setText($('#stock'), stock);
+            const stockUdsNode = (stock === 1) ? 'ud' : 'uds';
+            setText($('#stock-uds'), stockUdsNode);
+
+            // Updates the selected image
+
         });
     }
 
