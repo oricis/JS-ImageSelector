@@ -1,13 +1,18 @@
 function getSelectedOptionIndex(dataOptions, selectedValue)
 {
-    const variationKeys = Object.keys(dataOptions);
-
     let result = 0;
-    variationKeys.forEach((value, key) => {
-        if (value == selectedValue) {
-            result = key;
-        }
-    });
+    const optionKeys = Object.keys(dataOptions);
+
+    if (optionKeys && typeof (optionKeys) === 'object'
+        && Array.isArray(optionKeys)) {
+
+        optionKeys.forEach((value, index) => {
+            if (value == selectedValue) {
+                result = index;
+            }
+        });
+    }
+
 
     return result;
 }
