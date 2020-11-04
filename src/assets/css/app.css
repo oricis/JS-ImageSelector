@@ -5,12 +5,17 @@
 .border-top {
     border-top: 1px solid grey;
 }
+.selected-border {
+    border  : 2px solid rgb(55, 55, 55);
+}
+
 .cblue {
     color: rgb(91, 133, 211);
 }
 .cgrey {
     color:grey;
 }
+
 .flex {
     display: flex;
 }
@@ -29,6 +34,9 @@
 }
 .pad-2 {
     padding: 2%;
+}
+.pad-5 {
+    padding: 5%;
 }
 .pad-10 {
     padding: 10%;
@@ -55,7 +63,11 @@
     width: 80%;
 }
 
-/* custom styles */
+
+/***********************************************************************
+/* custom styles
+ */
+
 .content {
     margin    : 2rem auto;
     max-width : 920px;
@@ -69,4 +81,16 @@ main {
 }
 footer {
     height: 20vh;
+}
+
+.product img {
+    max-width: 480px;
+}
+.thumbnails {
+    display : flex;
+    gap     : 1rem;
+}
+.thumbnails img {
+    margin    : .5rem auto 1.5rem;
+    max-width : 120px;
 }
