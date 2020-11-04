@@ -6,31 +6,31 @@ window.onload = () => {
     const data = {
         variations: {
             1: {
-                price       : 10.00,
+                price       : '20.00',
                 name        : "Colgante Maduli",
                 description : "3 hojas, 2 colores",
                 stock       : 1,
             },
             2: {
-                price       : 10.00,
+                price       : '22.00',
                 name        : "Colgante Maduli",
                 description : "3 hojas, 3 colores",
                 stock       : 2,
             },
             3: {
-                price       : 10.00,
+                price       : '20.00',
                 name        : "Colgante Maduli",
                 description : "hilo arcoiris",
                 stock       : 1,
             },
             4: {
-                price       : 10.00,
+                price       : '20.00',
                 name        : "Colgante Maduli",
                 description : "gema esmeralda",
                 stock       : 1,
             },
             5: {
-                price       : 10.00,
+                price       : '20.00',
                 name        : "Colgante Maduli",
                 description : "cuerda marrón",
                 stock       : 1,
@@ -61,10 +61,15 @@ window.onload = () => {
 
         function updateItemDetails(selectedId)
         {
-            console.log('selectedId: ' + selectedId); // HACK:
+            const variationId = getLastSlice(selectedId, '-');
+            const variationData = data.variations[variationId];
 
             // Updated text details
-
+            const stock = variationData.stock;
+            setText($('#price'), variationData.price);
+            setText($('#stock'), stock);
+            const stockUdsNode = (stock === 1) ? 'ud' : 'uds';
+            setText($('#stock-uds'), stockUdsNode);
         }
 
         // Put a selected frame around the current variation image
