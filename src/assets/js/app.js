@@ -92,7 +92,7 @@ window.onload = () => {
                 updateImages(selectorButton);
                 updateItemDetails(selectorButton.id, selectVariations);
             });
-        })
+        });
 
 
         selectVariations.addEventListener("change", (event) => {
@@ -107,7 +107,19 @@ window.onload = () => {
             setText($('#stock-uds'), stockUdsNode);
 
             // Updates the selected image
+            let imageSelected = null;
+            variationSelectors.forEach(image => {
+                const variationId = getLastSlice(image.id, '-');
+                if (variationId === optionId) {
+                    imageSelected = image;
+                }
+            })
 
+            if (imageSelected) {
+                updateImages(imageSelected);
+                return;
+            }
+            console.error('No se puede seleccionar la imagen correcta');
         });
     }
 
