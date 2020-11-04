@@ -24,10 +24,10 @@ window.onload = () => {
                 stock       : 1,
             },
             4: {
-                price       : '20.00',
+                price       : '25.00',
                 name        : "Colgante Maduli",
                 description : "gema esmeralda",
-                stock       : 1,
+                stock       : 3,
             },
             5: {
                 price       : '20.00',
@@ -61,6 +61,28 @@ window.onload = () => {
 
         function updateItemDetails(selectedId)
         {
+            function updatedSelectByValue(selectNode, dataOptions, selectedValue)
+            {
+                const index = getSelectedOptionIndex(dataOptions, selectedValue);
+
+                // select the option by order
+                selectNode.options[index].selected = 'selected';
+            }
+
+            function getSelectedOptionIndex(dataOptions, selectedValue)
+            {
+                const variationKeys = Object.keys(dataOptions);
+
+                let result = 0;
+                variationKeys.forEach((value, key) => {
+                    if (value == selectedValue) {
+                        result = key;
+                    }
+                });
+
+                return result;
+            }
+
             const variationId = getLastSlice(selectedId, '-');
             const variationData = data.variations[variationId];
 
@@ -70,6 +92,9 @@ window.onload = () => {
             setText($('#stock'), stock);
             const stockUdsNode = (stock === 1) ? 'ud' : 'uds';
             setText($('#stock-uds'), stockUdsNode);
+
+            // Updated select details
+            updatedSelectByValue($('#variations'), data.variations, variationId);
         }
 
         // Put a selected frame around the current variation image

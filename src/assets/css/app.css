@@ -73,14 +73,17 @@
     max-width : 920px;
     width     : 90%;
 }
+footer {
+    height: 20vh;
+}
 header {
     height: 20vh;
 }
 main {
     min-height: 60vh;
 }
-footer {
-    height: 20vh;
+select {
+    width: 100%;
 }
 
 .product img {
