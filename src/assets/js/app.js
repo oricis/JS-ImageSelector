@@ -59,7 +59,7 @@ window.onload = () => {
             productImage.src = selected.src;
         }
 
-        function updateItemDetails(selectedId)
+        function updateItemDetails(selectedId, selectNode)
         {
             const variationId = getLastSlice(selectedId, '-');
             const variationData = data.variations[variationId];
@@ -72,7 +72,7 @@ window.onload = () => {
             setText($('#stock-uds'), stockUdsNode);
 
             // Updated select details
-            updatedSelectByValue($('#variations'), data.variations, variationId);
+            updatedSelectByValue(selectNode, data.variations, variationId);
         }
 
         // Put a selected frame around the current variation image
@@ -81,7 +81,7 @@ window.onload = () => {
         console.log('Main image src: ' + productImageSrc);
 
 
-
+        const selectVariations = $('#variations');
         const variationSelectors = $('.btn');
         variationSelectors.forEach(selectorButton => {
 
@@ -90,7 +90,7 @@ window.onload = () => {
 
             selectorButton.addEventListener('click', function (event) {
                 updateImages(selectorButton);
-                updateItemDetails(selectorButton.id);
+                updateItemDetails(selectorButton.id, selectVariations);
             });
         })
     }
